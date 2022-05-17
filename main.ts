@@ -4,6 +4,7 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.AB, function () {
     if (Codigo == Entrada) {
         basic.showIcon(IconNames.Yes)
+        pins.servoWritePin(AnalogPin.P0, 90)
     } else {
         basic.showIcon(IconNames.No)
     }
@@ -18,3 +19,4 @@ let Entrada = ""
 let Codigo = ""
 Codigo = "AABAA"
 Entrada = ""
+pins.servoWritePin(AnalogPin.P0, 0)
